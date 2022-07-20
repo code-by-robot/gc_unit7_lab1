@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Haupt Home Page</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        padding: 10px 16px;
+        background: rgb(113, 228, 180);
+        color: black;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky + .content {
+        padding-top: 102px;
+      }
+    </style>
+  </head>
+  <div class="header" id="myHeader">
+    <header><h1>Robot Haupt</h1></header>
+  </div>
+  <body class="content">
+    <div>
+      <h2>What's with your name?</h2>
+      <p>
+        I spent a semester playing women's rugby in college. My old/legal name
+        was three syllables and I wanted something shorter that could be yelled.
+        I thought Rob was cool. <i>Cue gender feelings.</i> <br /><br />
+        Originally, I said Rob was short for Robert, but I was so used to being
+        the only one with my name in places that having to best every single
+        Rob, Bob, Bobby and Robby in hand-to-hand combat was daunting. (That's
+        what you have to do when you have the same name as someone. I don't make
+        the rules.) <br /><br />
+        I also felt disconnected from Robert as a name and chose the non-binary
+        noun name of Robot because 1) R.O.B. from Nintendo was cool and 2) Robot
+        is a really cool name.
+      </p>
+    </div>
+    <div>
+      <h2>What did you do before coding?</h2>
+      <p>
+        Not much, really. <br /><br />
+        From childhood to my sophomore year of college, I was focused on
+        classical music, mainly on viola and mainly in orchestral settings.
+        Chamber music was ok, but people actually showed up to the big ensemble
+        concerts. During my freshman year of college, I started taking
+        engineering classes for fun.
+        <br /><br />
+        I switched majors to nuclear engineering, which is what my bachelor's is
+        in. I worked at a nuclear plant for almost five years. In 2020, I met my
+        wife online through a transgender-only Discord server. She helped me
+        realize 1) I was autistic as hell, 2) I was being treated really poorly
+        at my job (i.e. being placed on unpaid leave for over a month after
+        requesting ADA accommodations, only to have my requests denied). I left
+        my job to move across the country and live with her. <br /><br />
+        Because of the treatment I faced at my old plant, I decided to leave the
+        nuclear industry and make a career change to software engineering. It
+        helps that my wife's a senior software engineer so I can go to her for
+        help and tips. <br /><br />
+      </p>
+    </div>
+  </body>
+  <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+  <footer>
+    <a href="about.html">About</a> | <a href="portfolio.html">Portfolio</a>
+  </footer>
+</html>

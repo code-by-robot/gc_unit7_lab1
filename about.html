@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Robot</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        padding: 10px 16px;
+        background: rgb(113, 228, 180);
+        color: black;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky + .content {
+        padding-top: 102px;
+      }
+    </style>
+  </head>
+  <div class="header" id="myHeader">
+    <header><h1>Robot Haupt</h1></header>
+  </div>
+  <body class="content">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        Grand Circus coding bootcamp student with a background in nuclear
+        engineering.
+      </p>
+      <h2>Contact Me</h2>
+      <p>
+        Email: noneofyour@business.com |
+        <a href="http://www.linkedin.com/in/robot-haupt">LinkedIn</a> |
+        <a href="https://github.com/code-by-robot">GitHub</a>
+      </p>
+    </div>
+  </body>
+  <script>
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+  <footer>
+    <a href="portfolio.html">Portfolio</a> | <a href="home.html">Home</a>
+  </footer>
+</html>
